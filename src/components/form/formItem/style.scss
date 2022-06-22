@@ -1,0 +1,43 @@
+@use '../../../variables';
+
+.form-item {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: center;
+  padding: 0 1rem;
+
+  > label {
+    margin-right: 1rem;
+  }
+
+  label {
+    display: block;
+    font-size: 1rem;
+  }
+
+  input {
+    -webkit-appearance: none;
+
+    max-width: 20rem;
+
+    border: 1px solid #dddddd;
+    border-radius: 0.5rem;
+    background-color: variables.$pale-grey;
+
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: variables.$breakpoint-phone-large) {
+  .form-item {
+    display: block;
+
+    label,
+    input {
+      display: block;
+      width: 100%;
+    }
+  }
+}

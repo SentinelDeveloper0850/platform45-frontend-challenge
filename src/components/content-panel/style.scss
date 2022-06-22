@@ -1,0 +1,53 @@
+@use '../../variables';
+
+.content-panel {
+  background-color: variables.$tangerine;
+  padding: variables.$panel-padding;
+
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  right: 0;
+
+  @media (min-width: variables.$breakpoint-desktop) {
+    transition-timing-function: ease-in-out;
+    transition: 1s;
+
+    &.show {
+      right: 0;
+    }
+
+    &.hide {
+      right: -60%;
+    }
+  }
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    width: 100%;
+    padding: 3rem 1rem;
+    text-align: center;
+    position: relative;
+
+    transition-timing-function: ease-in-out;
+    transition: 1s;
+
+    &.show {
+      display: block;
+    }
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    color: variables.$charcoal-grey;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+}

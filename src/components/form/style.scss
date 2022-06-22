@@ -1,0 +1,37 @@
+@use '../../variables';
+
+.form-container {
+  background-color: variables.$white;
+
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    width: 100%;
+    position: relative;
+
+    &.show {
+      display: block;
+    }
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  form {
+    margin: 0;
+    width: 70%;
+    padding: 1rem;
+
+    @media (max-width: variables.$breakpoint-tablet) {
+      width: 100%;
+    }
+  }
+}

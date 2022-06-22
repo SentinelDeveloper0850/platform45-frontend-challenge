@@ -1,0 +1,45 @@
+@use '../../../variables';
+
+.radio {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+
+  .radio-button {
+    display: flex;
+    align-items: center;
+
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+    cursor: pointer;
+
+    .radio-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: variables.$pale-grey;
+      border: 1px solid #dddddd;
+      border-radius: 25rem;
+      padding: 1.2rem;
+
+      &.checked {
+        background-color: variables.$charcoal-grey;
+      }
+
+      img {
+        height: 1.1rem;
+      }
+    }
+
+    .radio-label {
+      color: variables.$charcoal-grey;
+    }
+  }
+}
