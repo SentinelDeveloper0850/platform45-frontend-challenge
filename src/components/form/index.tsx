@@ -1,26 +1,10 @@
 import './style.scss';
 
-import mars from '../../assets/images/mars-symbol.svg';
-import marsWhite from '../../assets/images/mars-symbol--white.svg';
-import venus from '../../assets/images/venus-symbol.svg';
-import venusWhite from '../../assets/images/venus-symbol--white.svg';
-import card from '../../assets/images/card.svg';
-import cardWhite from '../../assets/images/card--white.svg';
-
 import { useState } from 'react';
 import Radio from './radio';
 import FormItem from './formItem';
 import Button from './button';
-
-interface IFormData {
-  name: string;
-  dateOfBirth: string;
-  gender: string;
-  email: string;
-  phone: string;
-  customerID: string;
-  membership: string;
-}
+import { genderOptions, membershipOptions } from '../../constants';
 
 interface IProps {
   contentVisible: boolean;
@@ -34,42 +18,6 @@ const FormPanel = ({ contentVisible }: IProps) => {
   const [email, setEmail] = useState<string>('');
   const [phone, setPhone] = useState<string>('');
   const [customerID, setCustomerID] = useState<string>('');
-
-  const genderOptions = [
-    {
-      displayName: 'Male',
-      value: 'Male',
-      uncheckedImage: mars,
-      checkedImage: marsWhite,
-    },
-    {
-      displayName: 'Female',
-      value: 'Female',
-      uncheckedImage: venus,
-      checkedImage: venusWhite,
-    },
-  ];
-
-  const membershipOptions = [
-    {
-      displayName: 'Classic',
-      value: 'Classic',
-      uncheckedImage: card,
-      checkedImage: cardWhite,
-    },
-    {
-      displayName: 'Silver',
-      value: 'Silver',
-      uncheckedImage: card,
-      checkedImage: cardWhite,
-    },
-    {
-      displayName: 'Gold',
-      value: 'Gold',
-      uncheckedImage: card,
-      checkedImage: cardWhite,
-    },
-  ];
 
   const handleCancel = () => {
     setSelectedGender('');
