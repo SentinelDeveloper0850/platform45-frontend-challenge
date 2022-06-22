@@ -1,9 +1,9 @@
-import mars from 'assets/images/mars-symbol.svg';
-import marsWhite from 'assets/images/mars-symbol--white.svg';
-import venus from 'assets/images/venus-symbol.svg';
-import venusWhite from 'assets/images/venus-symbol--white.svg';
-import card from 'assets/images/card.svg';
-import cardWhite from 'assets/images/card--white.svg';
+import mars from './assets/images/mars-symbol.svg';
+import marsWhite from './assets/images/mars-symbol--white.svg';
+import venus from './assets/images/venus-symbol.svg';
+import venusWhite from './assets/images/venus-symbol--white.svg';
+import card from './assets/images/card.svg';
+import cardWhite from './assets/images/card--white.svg';
 
 export const genderOptions = [
   {
